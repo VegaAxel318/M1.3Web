@@ -40,12 +40,13 @@ function simularRoundRobin(procesos){
         terminados = 0;
         for (let index = 0; index < Object.keys(procesos).length; index++) {
             let proceso = procesos[index];
-            console.log(`Proceso ${proceso.nProceso}`);
+            document.write(`Proceso ${proceso.nProceso}`+"<br>");
+
             if(proceso.lineas[lineaActual] == undefined){
                 terminados++;
-                console.log("Terminado");
-            } else console.log(`Línea de código: ${proceso.lineas[lineaActual]}`);
+                document.write("Terminado"+"<br>");
+            } else document.write(`Línea de código: ${proceso.lineas[lineaActual]}`+"<br>");
         }
     }while(terminados!=Object.keys(procesos).length)
-    console.log("Simulación Terminada")
+    document.write("Simulación Terminada"+"<br>")
 }
